@@ -266,11 +266,11 @@ int main() {
 
     printf("\nPC : %d , SP = %d , M[01FD] = %d ,M[01FE] = %d ", cpu.PC ,cpu.SP, memory.data[0X01FD] ,memory.data[0X01FC]  );
     
-    // //test
-    // memory.data[0X8000]=cpu.INST_JSR; // 8000
-    // memory.data[0X8001]=0X21;         // 8001  
-    // memory.data[0X8002]=0XF3;         // 8002
-    // memory.data[0X8003]=0XEA;         // it should ignore ignore
+    //test
+     memory.data[0X8000]=cpu.INST_JSR; // 8000
+     memory.data[0X8001]=0X21;         // 8001  
+     memory.data[0X8002]=0XF3;         // 8002
+     memory.data[0X8003]=0XEA;         // it should ignore ignore
     // //end test
     
     memory.data[0X0081]=0XF3;         // 8002
@@ -278,6 +278,6 @@ int main() {
     
     cpu.Excute(6, memory);
     printMemory(memory);
-    printf("\nPC : %d , SP = %d , M[01FD] = %d ,M[01FE] = %d ", cpu.PC ,cpu.SP, memory.data[0X01FD] ,memory.data[0X01FC]  );
+    printf("\nPC : %d , SP = %d , M[01FD] = %d ,M[01FE] = %d \r\n", cpu.PC ,cpu.SP, memory.data[0X01FD] ,memory.data[0X01FC]  );
     return 0;
 }
